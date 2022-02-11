@@ -1,0 +1,19 @@
+<div class="entries">
+  <div class="welcome">
+    <h1>
+    📝 
+      <br>
+        Add a note
+      <br>
+      <p class="smalltext">(but keep it simple)</p>
+    </h1>
+  </div>
+
+  <div class="entry">
+    <%= render "form",  entry: @entry %>
+   <br>
+  <div>
+    <%= link_to "Back to entries", entries_path %>
+  </div>
+  </div>
+</div>

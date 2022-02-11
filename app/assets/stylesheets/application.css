@@ -13,3 +13,252 @@
  *= require_tree .
  *= require_self
  */
+ :root {
+    --white: #fff;
+    --green: rgb(37, 206, 169);;
+    --purple: #6529f3;
+    --purple2: #5315e4;
+    --lightgray: #eee;
+    --darkgray: #111;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;  
+}
+
+p {
+    color: rgb(63, 63, 63);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+.welcome {
+   padding-bottom: 20px;
+}
+p.smalltext {
+    font-size: small;
+    font-weight: 100;
+}
+a {
+    text-decoration: none;
+}
+button {
+    font-weight: 500;
+    border: none;
+    color: var(--green);
+    padding: 6px 15px;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--green);
+}
+button:hover{
+    background-color: rgb(179, 75, 75);
+}
+
+h1 {
+    color: rgb(58, 58, 58);
+    text-align: center;
+}
+.new {
+    padding: 0 0 20px 0;
+    text-align: center;
+    color:#7444e4
+}
+.new a{
+    font-weight: 500;
+    padding: 6px 15px;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--green);
+}
+.new a:hover{
+    color: var(--white);
+    background-color: #333;
+}
+code{
+    color:var(--purple2);
+}
+.entries{
+    padding: 0 20px;
+    padding-top: 30px;
+}
+.entry {
+    border-left: 5px solid var(--purple);
+    background-color:  rgb(239, 230, 255);
+    margin: 5px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+    padding: 7px;
+}
+
+.entry:hover {
+    background-color: rgb(232, 244, 255);
+    border-left: 5px solid #5315e4;
+    display: block;
+}
+.container {
+    padding: 50px;
+}
+/* NAV */
+header a {
+    text-decoration: none;
+}
+header {
+    padding: 0 20px;
+    background-color: var(--purple);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+#brand {
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+#brand a {
+    color: var(--white);
+}
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ul a {
+    color: var(--white)
+}
+  ul li {
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+#signup a {
+    color: var(--green);
+    font-weight: bold;
+}
+
+#login a {
+    color: var(--white); 
+}
+
+#hamburger-icon {
+margin: auto 0;
+display: none;
+cursor: pointer;
+}
+
+#hamburger-icon div {
+width: 35px;
+height: 3px;
+background-color: var(--white);
+margin: 6px 0;
+transition: 0.4s;
+}
+  
+.open .bar1 {
+-webkit-transform: rotate(-45deg) translate(-6px, 6px);
+transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+opacity: 0;
+}
+
+.open .bar3 {
+-webkit-transform: rotate(45deg) translate(-6px, -8px);
+transform: rotate(45deg) translate(-6px, -8px);
+}
+  
+.open .mobile-menu {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+
+.mobile-menu {
+display: none;
+position: absolute;
+background-color: #4b28e6d0;
+top: 50px;
+left: 0;
+height: calc(100vh - 50px);
+width: 100%;
+}
+  
+.mobile-menu li {
+margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+header nav {
+    display: none;
+}
+
+#hamburger-icon {
+    display: block;
+}
+}
+
+@media only screen and (min-width: 1000px) {
+.entries {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    }
+}
+
+/* form*/
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+ label{
+     color: rgb(63, 63, 63);
+     font-family: 'Poppins', sans-serif;
+     font-weight: 300;
+ } 
+input[type="submit"]{
+background-color: red;
+ font-weight: 500;
+ border: none;
+ color: var(--green);
+ padding: 6px 15px;
+ border-radius: 5px;
+ color: var(--white);
+ background-color: var(--green);
+}
+input[type="submit"]:hover{
+ background-color: rgb(46, 46, 46);
+}
+/* footer*/
+  footer {
+    padding: 10px 0 30px;
+    text-align: center;
+  }
+  footer p {
+    color: hsl(0, 0%, 60%);
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.7em;
+  }
+  .fa {
+    color: #2e2e2e;
+    font-size: 2.00em !important;
+    padding: 5px 5px;
+  }
+  .fa:hover {
+    color: var(--green);
+  }

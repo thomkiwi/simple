@@ -1,0 +1,34 @@
+<div class="entries">
+
+<div class="welcome">
+<h1>
+  👋
+  <br>
+    Add a note
+  <br>
+  <p class="smalltext">(but keep it simple)</p>
+</h1>
+</div>
+<div class = "new">
+  <%= link_to "Add a note", new_entry_path %>
+</div>
+
+      <% @entries.each do |entry| %>
+        <div class="entry">
+          <p>
+          >  <%= entry.description %>
+          </p>
+          <code class="snippet">
+          <%= entry.entry %>
+          </code>
+          <br>
+          <br>
+        
+          <%= button_to "Delete", entry, class: 'test', method: :delete %>
+        </div>
+
+      <% end %>
+</div>
+
+
+
