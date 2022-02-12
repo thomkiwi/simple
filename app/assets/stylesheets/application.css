@@ -220,7 +220,7 @@ header nav {
     }
 }
 /* form*/
-input[type=text], select {
+input[type=text], input[type=password], input[type=email] , select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -264,4 +264,7 @@ footer p {
 }
 .fa:hover {
     color: var(--green);
+}
+.formlink a{
+    font-size: small;
 }
