@@ -61,7 +61,7 @@ button:hover{
     background-color: rgb(179, 75, 75);
 }
 
-h1 {
+h1, h2 {
     color: rgb(58, 58, 58);
     text-align: center;
 }
@@ -137,10 +137,10 @@ ul {
 ul a {
     color: var(--white)
 }
-  ul li {
+ul li {
     padding: 5px;
     margin-left: 10px;
-  }
+}
   
 #signup a {
     color: var(--green);
@@ -150,7 +150,10 @@ ul a {
 #login a {
     color: var(--white); 
 }
-
+#user {
+    color: var(--white);
+    font-size: smaller;
+}
 #hamburger-icon {
 margin: auto 0;
 display: none;

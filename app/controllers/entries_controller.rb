@@ -1,9 +1,10 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /entries or /entries.json
   def index
-    @entries = Entry.all
+    @entries = Entry.where(:user_id => current_user.id).order('created_at DESC')
   end
 
   # GET /entries/1 or /entries/1.json
@@ -25,7 +26,7 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to entry_url(@entry), notice: "Entry was successfully created." }
+        format.html { redirect_to entries_url, notice: "Entry was successfully created." }
         format.json { render :show, status: :created, location: @entry }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +66,6 @@ class EntriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def entry_params
-      params.require(:entry).permit(:entry, :description)
+      params.require(:entry).permit(:entry, :description, :user_id)
     end
 end
