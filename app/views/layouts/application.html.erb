@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +21,7 @@
 
         <% if user_signed_in? %>
           <li id="user"><%= current_user.email %></li>
-          <li id="login"><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <li id="login"><%= button_to "Logout", destroy_user_session_path,  :method => 'delete', 'data-turbo': false %></li>
         <% else %>
         
           <li id="signup"><%= link_to "Sign Up", new_user_registration_path %></li>
@@ -39,7 +38,7 @@
         <div class="bar3"></div>
         <ul class="mobile-menu">
         <% if user_signed_in? %>
-         <li id="login"><%= button_to "Logout", destroy_user_session_path, :method => :delete %></li>
+         <li id="login"><%= button_to "Logout", destroy_user_session_path, :method => 'delete' %></li>
          <% else %>
           <li id="signup"><%= link_to "Sign Up", new_user_registration_path %></li>
           <li id="login"><%= link_to "Login", new_user_session_path %></li>
