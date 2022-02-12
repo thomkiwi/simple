@@ -26,7 +26,7 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to entries_url, notice: "Entry was successfully created." }
+        format.html { redirect_to entries_url, notice: "Cool. Noted 👍" }
         format.json { render :show, status: :created, location: @entry }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class EntriesController < ApplicationController
     @entry.destroy
 
     respond_to do |format|
-      format.html { redirect_to entries_url, notice: "Entry was successfully destroyed." }
+      format.html { redirect_to entries_url, notice: "Your note was deleted." }
       format.json { head :no_content }
     end
   end

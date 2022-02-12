@@ -268,3 +268,16 @@ footer p {
 .formlink a{
     font-size: small;
 }
+
+.alert-success {
+    padding: 10px 0;
+    color:white;
+    background-color: plum;
+    text-align: center;
+}
+.alert-danger{
+    padding: 10px 0;
+    color:white;
+    background-color: rgb(206, 58, 102);
+    text-align: center;
+}
