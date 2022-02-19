@@ -1,0 +1,36 @@
+ <header>
+    <div id="brand"><a href="/">Simple.</a></div>
+      <nav>
+        <ul>
+
+        <% if user_signed_in? %>
+          <li id="user"><%= current_user.email %></li>
+          <li id="login"><%= button_to "Logout", destroy_user_session_path,  :method => 'delete', 'data-turbo': false %></li>
+        <% else %>
+          <li id="signup"><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li id="login"><%= link_to "Login", new_user_session_path %></li>
+        <% end %>
+
+        </ul>
+      </nav>
+
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar3"></div>
+      <div class="bar2"></div>
+      <ul class="mobile-menu">
+        <% if user_signed_in? %>
+         <li id="login"><%= button_to "Logout", destroy_user_session_path, :method => 'delete', 'data-turbo': false %></li>
+         <% else %>
+          <li id="signup"><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li id="login"><%= link_to "Login", new_user_session_path %></li>
+          <% end %> 
+      </ul>
+    </div>
+</header>
+
+<script>
+  function toggleMobileMenu(menu) {
+    menu.classList.toggle('open');
+  }
+</script>
