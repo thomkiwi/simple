@@ -16,15 +16,14 @@ development:
   host: 127.0.0.1
   port: 3306
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: <%= ENV['DEVELOPMENT_DATABASE'] %
-  pool: 5
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /tmp/mysql.sock
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: prod_db
+#   username: abc
+#   password: 123
+#   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
